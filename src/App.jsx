@@ -19,6 +19,7 @@ import ExpensesPage, {
   expensesAction,
   expensesLoader,
 } from "./pages/ExpensesPage";
+import Secure from "./pages/Secure";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
         path: "logout",
         action: logoutAction,
       },
+      {
+        path: "secure/:id",
+        element: <Secure />,
+        errorElement: <Error />
+      }
     ],
   },
 ]);
